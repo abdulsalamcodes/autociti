@@ -464,6 +464,14 @@ input:focus {
 }
 
 @media (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+
+    .report_overview {
+     
+        font-size: 3.5rem;
+    }
     .header > .space_item {
         flex-direction: column;
     }
