@@ -104,8 +104,6 @@ body {
     flex-wrap: wrap;
 }
 
-
-
 .nav_item {
     flex: 1;
 }
@@ -139,8 +137,7 @@ body {
     fill: var(--deep-blue);
 }
 
-.nav_link:hover.nav_link::after,
-.nav_link.active.nav_link::after {
+.nav_link:hover.nav_link::after, .nav_link.active.nav_link::after {
     width: 100%;
     animation: elongate .3s linear;
 }
@@ -271,13 +268,10 @@ body {
 @media (max-width: 500px) {
     .grid_items {
         grid-template-columns: 1fr;
-
     }
-
     .primary_nav {
         padding: 1rem 2rem;
     }
-
     .d-flex {
         flex-direction: column;
         flex-wrap: wrap;
@@ -358,7 +352,7 @@ body {
 
 .product_card img {
     max-width: 100%;
-    /* width: 100%; */
+    width: 95%;
     object-fit: cover;
     height: 120px;
     /* width: 100%; */
@@ -442,20 +436,6 @@ input:focus {
     border: 1px solid #4E5C74;
 }
 
-
-@media (max-width: 500px) {
-    .input_with_btn {
-        border: none;
-    }
-    .input_with_btn > * 
-    .input_with_btn .input {
-        border: 1px solid #4E5C74;
-        margin-bottom: 1rem;
-    }
-}
-
-
-
 .search_holder {
     border: 1px solid #AFBED6;
     box-sizing: border-box;
@@ -466,9 +446,56 @@ input:focus {
 .search_input {
     height: 100%;
     border: none;
+    background-color: transparent;
+    padding: 1rem 2rem;
 }
 
 .btn-fade-blue {
     background: #AFCDFD;
     color: var(--deep-blue);
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+    .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+    .header_flex  {
+        flex-direction: column;
+        width: 100%;
+    }
+    .title {
+        margin-bottom: 2rem;
+    }
+    .input_with_btn {
+        border: none;
+        margin-top: 1rem;
+        min-height: max-content;
+        height: 100%;
+        margin-right: 0;
+    }
+    .input_with_btn>* {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 2rem;
+    }
+    .input_with_btn .input {
+        border: 1px solid #4E5C74;
+        margin-bottom: 1rem;
+    }
+    .search_holder {
+        border: none;
+        height: 100%;
+        flex-direction: column;
+    }
+    .search_holder > * {
+        width: 100%;
+    }
+    .search_input {
+        border: 1px solid #AFBED6;
+        margin-bottom: 1rem;
+    }
 }
